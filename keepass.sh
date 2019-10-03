@@ -23,10 +23,10 @@ while [ "$1" != "" ]; do
             exit
             ;;
         --push)
-            rclone copy "$LOCAL_DB_FOLDER $RCLONE_REMOTE_NAME:$REMOTE_DB_FOLDER" 
+            rclone -P copy "$LOCAL_DB_FOLDER $RCLONE_REMOTE_NAME:$REMOTE_DB_FOLDER" 
             ;;
         --pull)
-            rclone copy "$RCLONE_REMOTE_NAME:$REMOTE_DB_FOLDER" "$LOCAL_DB_FOLDER"
+            rclone -P copy "$RCLONE_REMOTE_NAME:$REMOTE_DB_FOLDER" "$LOCAL_DB_FOLDER"
             ;;
         *)
             echo "ERROR: unknown parameter \"$PARAM\""
@@ -36,3 +36,4 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
+echo "Done!"
