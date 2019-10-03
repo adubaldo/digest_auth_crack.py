@@ -2,7 +2,7 @@
 
 REMOTE_DB_FOLDER="KeePass/mydb.kdbx"    #the path where your database is located on your drive
 LOCAL_DB_FOLDER="/root/gdrive/"         #the path where you want pull your drive directories
-RCLONE_REMOTE_NAME="remote"             #the remote name chosen during rclone installation
+RCLONE_REMOTE_NAME="remote"             #the remote name chosen during rclone drive configuration
 
 
 function usage()
